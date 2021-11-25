@@ -31,7 +31,7 @@ public class WelcomeActivity extends AppCompatActivity {
         });
     }
     private void IniciarComponentes() {
-        signin = findViewById(R.id.Tv_signin);
+        signin = findViewById(R.id.tv_signin);
         google_login = findViewById(R.id.button_google_login);
         create_account = findViewById(R.id.button_create_account);
     }

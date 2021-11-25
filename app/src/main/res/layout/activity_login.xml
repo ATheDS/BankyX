@@ -7,7 +7,7 @@
     android:background="@color/primary_blue"
     tools:context=".LoginActivity">
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/button_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -38,7 +38,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton"
+        app:layout_constraintTop_toBottomOf="@+id/button_back"
         app:layout_constraintVertical_bias="0.0" />
 
     <View
@@ -181,7 +181,7 @@
 
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button"
+        android:id="@+id/button_signin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/primary_blue"
@@ -227,7 +227,7 @@
                 android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/Tv_signup"
+                android:id="@+id/tv_signup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"

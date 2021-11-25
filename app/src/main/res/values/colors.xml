@@ -9,5 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="primary_blue">#003DB8</color>
     <color name="secondary_blue">#00AEFF</color>
+    <color name="terciary_blue">#182253</color>
 
 </resources>
