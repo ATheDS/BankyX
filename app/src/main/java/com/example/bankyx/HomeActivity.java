@@ -4,10 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.widget.Adapter;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
+import android.widget.LinearLayout;
 
 public class HomeActivity extends AppCompatActivity {
     GridView monthly,subs,cards;
@@ -18,8 +20,12 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         iniciarComponentes();
         Dialog dialog = new Dialog(this);
-        dialog.setContentView(R.layout.card_monthlbudget);
-        dialog.show();
+        final Dialog mBottomSheetDialog = new Dialog(this, R.style.MaterialDialogSheet);
+        mBottomSheetDialog.setContentView(R.layout.popup_addtransaction); // your custom view.
+        mBottomSheetDialog.setCancelable(true);
+        mBottomSheetDialog.getWindow().setLayout(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        mBottomSheetDialog.getWindow().setGravity(Gravity.BOTTOM);
+        mBottomSheetDialog.show();
 
     }
 
