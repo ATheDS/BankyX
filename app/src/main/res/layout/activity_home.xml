@@ -246,7 +246,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="16dp"
-                android:text="Freelance wordk"
+                android:text="Freelance work"
                 android:textColor="#535457"
                 android:textSize="16sp"
                 android:textStyle="bold"
@@ -426,11 +426,15 @@
                             android:gravity="center"
                             android:horizontalSpacing="1dp"
                             android:numColumns="9"
+                            android:scrollbars="none"
+                            android:fadeScrollbars="false"
+                            android:scrollbarThumbVertical="@null"
+                            android:clipToPadding="false"
                             android:scrollbarAlwaysDrawHorizontalTrack="true"
                             android:scrollbarAlwaysDrawVerticalTrack="true"
-                            android:scrollbars="horizontal"
                             android:stretchMode="none"
-                            android:verticalSpacing="1dp"
+                            android:paddingVertical="10dp"
+                            android:verticalSpacing="10dp"
                             tools:listitem="@layout/card_monthlbudget">
 
                         </GridView>
@@ -444,73 +448,80 @@
 
 
 
-            <TextView
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/textView17"
                 android:layout_width="0dp"
-                android:layout_height="300dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:background="@color/primary_blue"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
+
                 app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView2"
-                tools:ignore="NotSibling" />
+                tools:ignore="NotSibling" >
 
-            <TextView
-                android:id="@+id/textView1811"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Monthly Subscriptions"
-                android:textColor="@color/white"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="@+id/imageView4"
-                app:layout_constraintTop_toTopOf="@+id/textView17" />
-            <HorizontalScrollView
-                android:id="@+id/horizontalScrollView3"
-                android:layout_width="match_parent"
-                android:layout_height="fill_parent"
-                android:layout_margin="20dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView1811">
-                <FrameLayout
-                    android:id="@+id/frameLayout1"
+                <TextView
+                    android:id="@+id/textView1811"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
+                    android:text="Monthly Subscriptions"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/horizontalScrollView3"
+                    app:layout_constraintTop_toTopOf="@+id/textView17" />
+                <HorizontalScrollView
+                    android:id="@+id/horizontalScrollView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
+                    android:paddingBottom="60dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView1811">
-
-                    <LinearLayout
-                        android:id="@+id/linearLayout_gri1dt2ableLayout"
-                        android:layout_width="900dp"
+                    <FrameLayout
+                        android:id="@+id/frameLayout1"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal">
+                        android:layout_marginTop="20dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView1811">
 
-                        <GridView
-                            android:id="@+id/gridviewsubscriptions"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="4dp"
-                            android:columnWidth="300dp"
-                            android:gravity="center"
-                            android:horizontalSpacing="1dp"
-                            android:numColumns="9"
-                            android:scrollbarAlwaysDrawHorizontalTrack="true"
-                            android:scrollbarAlwaysDrawVerticalTrack="true"
-                            android:scrollbars="horizontal"
-                            android:stretchMode="none"
-                            android:verticalSpacing="1dp"
-                            tools:listitem="@layout/card_monthlysubscription">
+                        <LinearLayout
+                            android:id="@+id/linearLayout_gri1dt2ableLayout"
+                            android:layout_width="900dp"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
 
-                        </GridView>
+                            <GridView
+                                android:id="@+id/gridviewsubscriptions"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:columnWidth="300dp"
+                                android:gravity="center"
+                                android:horizontalSpacing="1dp"
+                                android:numColumns="9"
+                                android:scrollbarAlwaysDrawHorizontalTrack="true"
+                                android:scrollbarAlwaysDrawVerticalTrack="true"
+                                android:scrollbars="horizontal"
+                                android:stretchMode="none"
+                                android:verticalSpacing="1dp"
+                                tools:listitem="@layout/card_monthlysubscription">
+
+                            </GridView>
 
 
-                    </LinearLayout>
-                </FrameLayout>
+                        </LinearLayout>
+                    </FrameLayout>
 
-            </HorizontalScrollView>
+                </HorizontalScrollView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
