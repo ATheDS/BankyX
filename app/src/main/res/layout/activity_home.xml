@@ -61,13 +61,13 @@
                 android:background="@android:color/transparent"
                 android:padding="10dp"
                 android:src="@drawable/ic_notifications"
-                app:layout_constraintBottom_toBottomOf="@+id/imageButton2"
-                app:layout_constraintEnd_toStartOf="@+id/imageButton2"
-                app:layout_constraintTop_toTopOf="@+id/imageButton2"
+                app:layout_constraintBottom_toBottomOf="@+id/userimage"
+                app:layout_constraintEnd_toStartOf="@+id/userimage"
+                app:layout_constraintTop_toTopOf="@+id/userimage"
                 app:layout_constraintVertical_bias="0.0" />
 
             <ImageButton
-                android:id="@+id/imageButton2"
+                android:id="@+id/userimage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
@@ -99,20 +99,25 @@
                         android:orientation="horizontal">
 
                         <GridView
-                            tools:listitem="@layout/card_monthlbudget"
+                            tools:listitem="@layout/credit_card"
                             android:id="@+id/gridviewcard"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="4dp"
                             android:columnWidth="300dp"
                             android:gravity="center"
-                            android:horizontalSpacing="1dp"
-                            android:numColumns="9"
+                            android:horizontalSpacing="20dp"
+                            android:numColumns="3"
+                            android:scrollbars="none"
+                            android:fadeScrollbars="false"
+                            android:scrollbarThumbVertical="@null"
+                            android:clipToPadding="false"
                             android:scrollbarAlwaysDrawHorizontalTrack="true"
                             android:scrollbarAlwaysDrawVerticalTrack="true"
-                            android:scrollbars="horizontal"
                             android:stretchMode="none"
-                            android:verticalSpacing="1dp">
+                            android:paddingVertical="10dp"
+                            android:verticalSpacing="10dp"
+                            >
 
                         </GridView>
 
@@ -407,7 +412,6 @@
                     android:id="@+id/frameLayout"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="20dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView181">
 

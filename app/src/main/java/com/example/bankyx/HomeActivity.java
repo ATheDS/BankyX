@@ -12,6 +12,7 @@ import android.widget.Adapter;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -20,6 +21,7 @@ public class HomeActivity extends AppCompatActivity {
     GridView monthly,subs,cards;
     FloatingActionButton addTransaction;
     ImageButton notification;
+    ImageView user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,9 +48,15 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(new Intent(HomeActivity.this,NotificationsActivity.class));
             }
         });
-    monthly.setAdapter(new MontlyAdapter(this));
-    cards.setAdapter(new MontlyAdapter(this));
-    subs.setAdapter(new MontlyAdapter(this));
+        user.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeActivity.this,ProfileActivity.class));
+            }
+        });
+    monthly.setAdapter(new MontlyAdapter(this,R.layout.card_monthlbudget));
+    cards.setAdapter(new MontlyAdapter(this,R.layout.credit_card));
+    subs.setAdapter(new MontlyAdapter(this,R.layout.card_monthlbudget));
 
     }
 
@@ -58,6 +66,7 @@ public class HomeActivity extends AppCompatActivity {
     cards = findViewById(R.id.gridviewcard);
     addTransaction = findViewById(R.id.add_transaction);
     notification = findViewById(R.id.btn_notification);
+    user = findViewById(R.id.userimage);
 
     }
 }

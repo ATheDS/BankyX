@@ -10,7 +10,9 @@ import android.widget.TextView;
 
 public class MontlyAdapter extends BaseAdapter {
     Context context;
-    public MontlyAdapter(Context context){
+    int layout;
+    public MontlyAdapter(Context context,int layout){
+        this.layout = layout;
         this.context = context;
 
     }
@@ -33,7 +35,7 @@ public class MontlyAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        view = LayoutInflater.from(context).inflate(R.layout.card_monthlbudget,viewGroup,false);
+        view = LayoutInflater.from(context).inflate(layout,viewGroup,false);
         return view;
     }
 }
