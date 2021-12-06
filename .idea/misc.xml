@@ -19,7 +19,8 @@
         <entry key="..\:/Users/rafael.soares/AndroidStudioProjects/BankyX/app/src/main/res/drawable/spinner.xml" value="0.13034188034188035" />
         <entry key="..\:/Users/rafael.soares/AndroidStudioProjects/BankyX/app/src/main/res/drawable/top_radious_card.xml" value="0.2846153846153846" />
         <entry key="..\:/Users/rafael.soares/AndroidStudioProjects/BankyX/app/src/main/res/layout-v28/popup_addtransaction.xml" value="0.27291666666666664" />
-        <entry key="..\:/Users/rafael.soares/AndroidStudioProjects/BankyX/app/src/main/res/layout/activity_home.xml" value="0.23508137432188064" />
+        <entry key="..\:/Users/rafael.soares/AndroidStudioProjects/BankyX/app/src/main/res/layout/activity_graph.xml" value="0.22" />
+        <entry key="..\:/Users/rafael.soares/AndroidStudioProjects/BankyX/app/src/main/res/layout/activity_home.xml" value="0.14" />
         <entry key="..\:/Users/rafael.soares/AndroidStudioProjects/BankyX/app/src/main/res/layout/activity_login.xml" value="0.14925373134328357" />
         <entry key="..\:/Users/rafael.soares/AndroidStudioProjects/BankyX/app/src/main/res/layout/activity_notifications.xml" value="0.22393162393162394" />
         <entry key="..\:/Users/rafael.soares/AndroidStudioProjects/BankyX/app/src/main/res/layout/activity_profile.xml" value="0.21" />
@@ -29,6 +30,7 @@
         <entry key="..\:/Users/rafael.soares/AndroidStudioProjects/BankyX/app/src/main/res/layout/card_monthlysubs.xml" value="0.22" />
         <entry key="..\:/Users/rafael.soares/AndroidStudioProjects/BankyX/app/src/main/res/layout/card_monthlysubscription.xml" value="0.22393162393162394" />
         <entry key="..\:/Users/rafael.soares/AndroidStudioProjects/BankyX/app/src/main/res/layout/credit_card.xml" value="0.25" />
+        <entry key="..\:/Users/rafael.soares/AndroidStudioProjects/BankyX/app/src/main/res/layout/fragment_home.xml" value="0.1170940170940171" />
         <entry key="..\:/Users/rafael.soares/AndroidStudioProjects/BankyX/app/src/main/res/layout/notification.xml" value="0.25" />
         <entry key="..\:/Users/rafael.soares/AndroidStudioProjects/BankyX/app/src/main/res/layout/payment_request_notification.xml" value="0.25" />
         <entry key="..\:/Users/rafael.soares/AndroidStudioProjects/BankyX/app/src/main/res/layout/popup_addtransaction.xml" value="0.33" />

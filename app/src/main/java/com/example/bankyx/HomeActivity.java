@@ -1,6 +1,8 @@
 package com.example.bankyx;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 import android.app.Dialog;
 import android.content.Intent;
@@ -16,18 +18,19 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.tabs.TabLayout;
 
 public class HomeActivity extends AppCompatActivity {
-    GridView monthly,subs,cards;
     FloatingActionButton addTransaction;
-    ImageButton notification;
-    ImageView user;
+    TabLayout tabLayout;
+    ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         iniciarComponentes();
+
 
         addTransaction.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,31 +45,16 @@ public class HomeActivity extends AppCompatActivity {
 
             }
         });
-        notification.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(HomeActivity.this,NotificationsActivity.class));
-            }
-        });
-        user.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(HomeActivity.this,ProfileActivity.class));
-            }
-        });
-    monthly.setAdapter(new MontlyAdapter(this,R.layout.card_monthlbudget));
-    cards.setAdapter(new MontlyAdapter(this,R.layout.credit_card));
-    subs.setAdapter(new MontlyAdapter(this,R.layout.card_monthlbudget));
+        TabsAdapter adapter = new TabsAdapter(getSupportFragmentManager());
+        viewPager.setAdapter(adapter);
+
 
     }
 
     private void iniciarComponentes() {
-    monthly = findViewById(R.id.gridviewbufget);
-    subs = findViewById(R.id.gridviewsubscriptions);
-    cards = findViewById(R.id.gridviewcard);
     addTransaction = findViewById(R.id.add_transaction);
-    notification = findViewById(R.id.btn_notification);
-    user = findViewById(R.id.userimage);
+    tabLayout = findViewById(R.id.tabLayout);
+    viewPager = findViewById(R.id.viewpager);
 
     }
 }
